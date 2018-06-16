@@ -34,4 +34,11 @@ RSpec.describe Gestalt do
 
     expect(collection.get :name, 'Bonnie').to eql 'Bonnie'
   end
+
+  it "can set a value" do
+    collection = Gestalt::Collection.new({})
+    collection.set :drink, 'Bourbon'
+
+    expect(collection.get :drink).to eql 'Bourbon'
+  end
 end
